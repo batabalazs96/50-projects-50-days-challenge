@@ -1,1 +1,0 @@
-alert('Hi Iam javascript');
