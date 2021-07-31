@@ -38,25 +38,13 @@ body {
 }
 
 .panel.active {
-  flex: 5;
+  flex: 2;
 }
 
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
-
-/* .panel:first-of-type {
-  background-position: 50% 30%;
-}
-
-.panel:nth-of-type(3) {
-  background-position: 80% 10%;
-}
-
-.panel:nth-of-type(5) {
-  background-position: 50% 10%;
-} */
 
 @media (max-width: 480px) {
   .container {
