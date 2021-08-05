@@ -1,0 +1,108 @@
+:root {
+  --left-background-cover: rgb(3, 5, 8);
+  --right-background-cover: rgb(3, 5, 8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+.split.left {
+  left: 0;
+  background: url(https://images.unsplash.com/photo-1592924357228-91a4daadcfea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 50%;
+}
+.split.right {
+  right: 0;
+  background: url(https://images.unsplash.com/photo-1581264542935-745d77881a2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 50%;
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  background-color: var(--left-background-cover);
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  background-color: var(--right-background-cover);
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  position: absolute;
+  color: white;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transform: translateX(-50%);
+  width: 15rem;
+  padding: 10px;
+  border: solid 3px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.left .btn:hover {
+  background-color: tomato;
+}
+.right .btn:hover {
+  background-color: paleturquoise;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+.hover-left .right {
+  width: 25%;
+}
+.hover-right .left {
+  width: 25%;
+}
+.hover-right .right {
+  width: 75%;
+}
+
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+  transition: all 1s ease;
+}
