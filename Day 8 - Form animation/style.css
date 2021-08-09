@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: chocolate;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  background-color: darkgreen;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  background-color: blueviolet;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.text {
+  margin-top: 30px;
+}
+.form-control {
+  position: relative;
+  width: 300px;
+  margin: 20px 0 40px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form-control input:focus + label span {
+  transform: translateY(-30px);
+}
