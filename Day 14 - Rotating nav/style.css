@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #d0efff 0%,
+    #d0efff 50%,
+    #03254c 50%,
+    #03254c 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 350px;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  width: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transition: rotateY 0.6s linear, opacity 0.6s linear, width 0.6s linear;
+  opacity: 0;
+  transform: rotateY(0deg);
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul a {
+  position: relative;
+  margin: 0px 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.icon {
+  position: relative;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.icon .line {
+  position: absolute;
+  background-color: #000;
+  height: 2px;
+  width: 20px;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+
+.icon .line-2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line-1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line-2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
