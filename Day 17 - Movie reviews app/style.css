@@ -1,0 +1,95 @@
+:root {
+  --primary-color: rgb(80, 0, 0);
+  --secondary-color: rgb(40, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--secondary-color);
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  height: 60px;
+  background-color: var(--primary-color);
+}
+.search {
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+.search::placeholder {
+  color: rgb(255, 175, 175);
+}
+.search:focus {
+  background-color: var(--secondary-color);
+  color: white;
+  outline: none;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie {
+  background-color: var(--primary-color);
+  margin: 30px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--secondary-color);
+}
+
+.movie-info span.green {
+  color: rgb(0, 255, 0);
+}
+
+.movie-info span.orange {
+  color: rgb(255, 153, 0);
+}
+
+.movie-info span.red {
+  color: rgb(209, 0, 0);
+}
+
+.overview {
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  transform: translateY(101%);
+  transition: 0.3s ease;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
